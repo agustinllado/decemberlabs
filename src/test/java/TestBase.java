@@ -41,7 +41,7 @@ public class TestBase {
 
     @BeforeMethod
     @Parameters(value={"browserName"})
-    public void beforeMethodMethod(String browserName, Method testMethod) {
+    public void beforeMethodMethod(@Optional("chrome") String browserName, Method testMethod) {
         logger = extent.createTest(testMethod.getName());
         setupDriver(browserName);
         browser.manage().window().maximize();

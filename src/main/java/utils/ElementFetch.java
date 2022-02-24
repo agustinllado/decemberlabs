@@ -1,30 +1,36 @@
 package main.java.utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import test.java.TestBase;
 
+import java.time.Duration;
 import java.util.List;
 
 public class ElementFetch {
+
+    WebDriver browser = TestBase.browser;
 
     public WebElement getWebElement(String identifierType, String identifierValue) {
         identifierType = identifierType.toLowerCase();
         switch (identifierType) {
             case "id":
-                return TestBase.browser.findElement(By.id(identifierValue));
+                return browser.findElement(By.id(identifierValue));
             case "classname":
-                return TestBase.browser.findElement(By.className(identifierValue));
+                return browser.findElement(By.className(identifierValue));
             case "name":
-                return TestBase.browser.findElement(By.name(identifierValue));
+                return browser.findElement(By.name(identifierValue));
             case "cssselector":
-                return TestBase.browser.findElement(By.cssSelector(identifierValue));
+                return browser.findElement(By.cssSelector(identifierValue));
             case "xpath":
-                return TestBase.browser.findElement(By.xpath(identifierValue));
+                return browser.findElement(By.xpath(identifierValue));
             case "linktest":
-                return TestBase.browser.findElement(By.partialLinkText(identifierValue));
+                return browser.findElement(By.partialLinkText(identifierValue));
             case "tagname":
-                return TestBase.browser.findElement(By.tagName(identifierValue));
+                return browser.findElement(By.tagName(identifierValue));
             default:
                 return null;
         }
@@ -33,19 +39,19 @@ public class ElementFetch {
     public List<WebElement> getWebElements(String identifierType, String identifierValue) {
         switch (identifierType) {
             case "id":
-                return TestBase.browser.findElements(By.id(identifierValue));
+                return browser.findElements(By.id(identifierValue));
             case "className":
-                return TestBase.browser.findElements(By.className(identifierValue));
+                return browser.findElements(By.className(identifierValue));
             case "name":
-                return TestBase.browser.findElements(By.name(identifierValue));
+                return browser.findElements(By.name(identifierValue));
             case "cssSelector":
-                return TestBase.browser.findElements(By.cssSelector(identifierValue));
+                return browser.findElements(By.cssSelector(identifierValue));
             case "xpath":
-                return TestBase.browser.findElements(By.xpath(identifierValue));
+                return browser.findElements(By.xpath(identifierValue));
             case "linkTest":
-                return TestBase.browser.findElements(By.partialLinkText(identifierValue));
+                return browser.findElements(By.partialLinkText(identifierValue));
             case "tagName":
-                return TestBase.browser.findElements(By.tagName(identifierValue));
+                return browser.findElements(By.tagName(identifierValue));
             default:
                 return null;
         }

@@ -9,6 +9,5 @@
         <classes>
             <class name="test.java.SampleTest"/>
         </classes>
-
-    </test> <!-- Test -->
+    </test>
 </suite> <!-- Suite -->

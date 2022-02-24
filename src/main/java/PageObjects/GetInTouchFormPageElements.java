@@ -9,4 +9,9 @@ public interface GetInTouchFormPageElements {
     String budgetRadio = "#budget input[value='%s']";
     String hearUsRadio = "#hearus input[value='%s']";
     String sendButton = "#email-form input[type='submit']";
+
+    String nameTextWarning = ".warning #name";
+    String emailTextWarning = ".warning #email";
+    String messageTextWarning = ".warning #message";
+
 }
