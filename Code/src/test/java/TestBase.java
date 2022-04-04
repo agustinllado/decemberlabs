@@ -85,7 +85,7 @@ public class TestBase {
             case "edge":
                 break;
             default:
-                System.setProperty("webdriver.chrome.driver", String.format(route, "chromedriver"));
+                System.setProperty("webdriver.chrome.driver", String.format(route, "chromedriver.exe"));
                 browser = new ChromeDriver();
                 break;
         }
