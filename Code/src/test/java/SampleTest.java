@@ -1,8 +1,8 @@
 package test.java;
 
 import main.java.pageEvents.ConfirmationPageEvents;
-import main.java.pageEvents.GetInTouchFormPageEvents;
-import main.java.pageEvents.HomePageEvents;
+import main.java.pageEvents.GetInTouchFormPage;
+import main.java.pageEvents.HomePage;
 import main.java.utils.Constants;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,15 +11,15 @@ public class SampleTest extends TestBase {
 
     @Test
     public void getInTouchHappyPathTest() {
-        HomePageEvents homePage = new HomePageEvents(browser);
+        HomePage homePage = new HomePage(driver);
         homePage.clickGetInTouchButton();
 
-        GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
+        GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterName("Agustin");
         getInTouchFormPage.enterEmail(Constants.email);
         getInTouchFormPage.enterCompany("The testing company");
         getInTouchFormPage.enterMessage("Test message");
-        getInTouchFormPage.selectBudget("$50K-$100K");
+        getInTouchFormPage.selectBudget("50K-100K");
         getInTouchFormPage.selectHearAboutUs("Google");
         getInTouchFormPage.submit();
 
@@ -31,10 +31,10 @@ public class SampleTest extends TestBase {
 
     @Test
     public void emptyBudgetTest() {
-        HomePageEvents homePage = new HomePageEvents(browser);
+        HomePage homePage = new HomePage(driver);
         homePage.clickGetInTouchButton();
 
-        GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
+        GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterName("Agustin");
         getInTouchFormPage.enterEmail(Constants.email);
         getInTouchFormPage.enterCompany("The testing company");
@@ -50,15 +50,15 @@ public class SampleTest extends TestBase {
 
     @Test
     public void emptyHearAboutUsTest() {
-        HomePageEvents homePage = new HomePageEvents(browser);
+        HomePage homePage = new HomePage(driver);
         homePage.clickGetInTouchButton();
 
-        GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
+        GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterName("Agustin");
         getInTouchFormPage.enterEmail(Constants.email);
         getInTouchFormPage.enterCompany("The testing company");
         getInTouchFormPage.enterMessage("Test message");
-        getInTouchFormPage.selectBudget("$100K-$200K");
+        getInTouchFormPage.selectBudget("100K-200K");
         getInTouchFormPage.submit();
 
         ConfirmationPageEvents confirmationPageEvents = new ConfirmationPageEvents();
@@ -69,14 +69,14 @@ public class SampleTest extends TestBase {
 
     @Test
     public void emptyNameValidationTest() {
-        HomePageEvents homePage = new HomePageEvents(browser);
+        HomePage homePage = new HomePage(driver);
         homePage.clickGetInTouchButton();
 
-        GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
+        GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterEmail(Constants.email);
         getInTouchFormPage.enterCompany("The testing company");
         getInTouchFormPage.enterMessage("Test message");
-        getInTouchFormPage.selectBudget("Below $25K");
+        getInTouchFormPage.selectBudget("Below 25K");
         getInTouchFormPage.selectHearAboutUs("Social");
         getInTouchFormPage.submit();
 
@@ -85,14 +85,14 @@ public class SampleTest extends TestBase {
 
     @Test
     public void emptyEmailValidationTest() {
-        HomePageEvents homePage = new HomePageEvents(browser);
+        HomePage homePage = new HomePage(driver);
         homePage.clickGetInTouchButton();
 
-        GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
+        GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterName("Agustin");
         getInTouchFormPage.enterCompany("The testing company");
         getInTouchFormPage.enterMessage("Test message");
-        getInTouchFormPage.selectBudget("$25K-$50K");
+        getInTouchFormPage.selectBudget("25K-50K");
         getInTouchFormPage.selectHearAboutUs("Events");
         getInTouchFormPage.submit();
 
@@ -101,14 +101,14 @@ public class SampleTest extends TestBase {
 
     @Test
     public void emptyMessageValidationTest() {
-        HomePageEvents homePage = new HomePageEvents(browser);
+        HomePage homePage = new HomePage(driver);
         homePage.clickGetInTouchButton();
 
-        GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
+        GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterName("Agustin");
         getInTouchFormPage.enterEmail(Constants.email);
         getInTouchFormPage.enterCompany("The testing company");
-        getInTouchFormPage.selectBudget("Above $200K");
+        getInTouchFormPage.selectBudget("Above 200K");
         getInTouchFormPage.selectHearAboutUs("Recommendation");
         getInTouchFormPage.submit();
 

@@ -21,7 +21,7 @@ public class ConfirmationPageEvents extends BasePage {
     }
 
     public void clickOk() {
-        WebDriverWait webDriverWait = new WebDriverWait(TestBase.browser, Duration.ofSeconds(3));
+        WebDriverWait webDriverWait = new WebDriverWait(TestBase.driver, Duration.ofSeconds(3));
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(ConfirmationPageElements.okButton)));
         try {
             Thread.sleep(2000);

@@ -20,7 +20,7 @@ import java.time.Duration;
 
 public class TestBase {
 
-    public static WebDriver browser;
+    public static WebDriver driver;
     public ExtentSparkReporter htmlReporter;
     public static ExtentReports extent;
     public static ExtentTest logger;
@@ -44,9 +44,9 @@ public class TestBase {
     public void beforeMethodMethod(@Optional("chrome") String browserName, Method testMethod) {
         logger = extent.createTest(testMethod.getName());
         setupDriver(browserName);
-        browser.manage().window().maximize();
-        browser.get(Constants.url);
-        browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        driver.get(Constants.url);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @AfterMethod
@@ -67,7 +67,7 @@ public class TestBase {
             Markup markup = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
             logger.log(Status.SKIP, markup);
         }
-        browser.quit();
+        driver.quit();
     }
 
     @AfterTest
@@ -86,7 +86,7 @@ public class TestBase {
                 break;
             default:
                 System.setProperty("webdriver.chrome.driver", String.format(route, "chromedriver.exe"));
-                browser = new ChromeDriver();
+                driver = new ChromeDriver();
                 break;
         }
     }
