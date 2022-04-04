@@ -11,7 +11,7 @@ public class SampleTest extends TestBase {
 
     @Test
     public void getInTouchHappyPathTest() {
-        HomePageEvents homePage = new HomePageEvents();
+        HomePageEvents homePage = new HomePageEvents(browser);
         homePage.clickGetInTouchButton();
 
         GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
@@ -31,7 +31,7 @@ public class SampleTest extends TestBase {
 
     @Test
     public void emptyBudgetTest() {
-        HomePageEvents homePage = new HomePageEvents();
+        HomePageEvents homePage = new HomePageEvents(browser);
         homePage.clickGetInTouchButton();
 
         GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
@@ -50,7 +50,7 @@ public class SampleTest extends TestBase {
 
     @Test
     public void emptyHearAboutUsTest() {
-        HomePageEvents homePage = new HomePageEvents();
+        HomePageEvents homePage = new HomePageEvents(browser);
         homePage.clickGetInTouchButton();
 
         GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
@@ -69,7 +69,7 @@ public class SampleTest extends TestBase {
 
     @Test
     public void emptyNameValidationTest() {
-        HomePageEvents homePage = new HomePageEvents();
+        HomePageEvents homePage = new HomePageEvents(browser);
         homePage.clickGetInTouchButton();
 
         GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
@@ -85,7 +85,7 @@ public class SampleTest extends TestBase {
 
     @Test
     public void emptyEmailValidationTest() {
-        HomePageEvents homePage = new HomePageEvents();
+        HomePageEvents homePage = new HomePageEvents(browser);
         homePage.clickGetInTouchButton();
 
         GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
@@ -101,7 +101,7 @@ public class SampleTest extends TestBase {
 
     @Test
     public void emptyMessageValidationTest() {
-        HomePageEvents homePage = new HomePageEvents();
+        HomePageEvents homePage = new HomePageEvents(browser);
         homePage.clickGetInTouchButton();
 
         GetInTouchFormPageEvents getInTouchFormPage = new GetInTouchFormPageEvents();
