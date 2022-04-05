@@ -1,8 +1,8 @@
 package test.java;
 
-import main.java.pageEvents.ConfirmationPageEvents;
-import main.java.pageEvents.GetInTouchFormPage;
-import main.java.pageEvents.HomePage;
+import main.java.pageObjects.ConfirmationPage;
+import main.java.pageObjects.GetInTouchFormPage;
+import main.java.pageObjects.HomePage;
 import main.java.utils.Constants;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -23,7 +23,7 @@ public class SampleTest extends TestBase {
         getInTouchFormPage.selectHearAboutUs("Google");
         getInTouchFormPage.submit();
 
-        ConfirmationPageEvents confirmationPageEvents = new ConfirmationPageEvents();
+        ConfirmationPage confirmationPageEvents = new ConfirmationPage(driver);
         confirmationPageEvents.clickOk();
 
         Assert.assertTrue(homePage.isGetInTouchButtonEnabled(), "Get in touch button is not displayed");
@@ -42,7 +42,7 @@ public class SampleTest extends TestBase {
         getInTouchFormPage.selectHearAboutUs("Word-of-mouth");
         getInTouchFormPage.submit();
 
-        ConfirmationPageEvents confirmationPageEvents = new ConfirmationPageEvents();
+        ConfirmationPage confirmationPageEvents = new ConfirmationPage(driver);
         confirmationPageEvents.clickOk();
 
         Assert.assertTrue(homePage.isGetInTouchButtonEnabled(), "Get in touch button is not displayed");
@@ -61,7 +61,7 @@ public class SampleTest extends TestBase {
         getInTouchFormPage.selectBudget("100K-200K");
         getInTouchFormPage.submit();
 
-        ConfirmationPageEvents confirmationPageEvents = new ConfirmationPageEvents();
+        ConfirmationPage confirmationPageEvents = new ConfirmationPage(driver);
         confirmationPageEvents.clickOk();
 
         Assert.assertTrue(homePage.isGetInTouchButtonEnabled(), "Get in touch button is not displayed");

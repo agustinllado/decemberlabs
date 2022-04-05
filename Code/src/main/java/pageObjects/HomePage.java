@@ -1,4 +1,4 @@
-package main.java.pageEvents;
+package main.java.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class HomePage extends BasePage {
+public class HomePage extends main.java.pageObjects.BasePage {
 
     @FindBy(how = How.CLASS_NAME, using = "btn_mobile")
     private WebElement hamburgerButton;

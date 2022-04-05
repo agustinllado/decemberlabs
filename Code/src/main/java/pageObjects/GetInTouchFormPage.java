@@ -1,11 +1,11 @@
-package main.java.pageEvents;
+package main.java.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class GetInTouchFormPage extends BasePage {
+public class GetInTouchFormPage extends main.java.pageObjects.BasePage {
 
     @FindBy(id="name")
     private WebElement nameText;
