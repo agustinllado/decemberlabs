@@ -12,7 +12,7 @@ public class SampleTest extends TestBase {
     @Test
     public void getInTouchHappyPathTest() {
         HomePage homePage = new HomePage(driver);
-        homePage.clickGetInTouchButton();
+        homePage.openGetInTouchForm();
 
         GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterName("Agustin");
@@ -32,7 +32,7 @@ public class SampleTest extends TestBase {
     @Test
     public void emptyBudgetTest() {
         HomePage homePage = new HomePage(driver);
-        homePage.clickGetInTouchButton();
+        homePage.openGetInTouchForm();
 
         GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterName("Agustin");
@@ -51,7 +51,7 @@ public class SampleTest extends TestBase {
     @Test
     public void emptyHearAboutUsTest() {
         HomePage homePage = new HomePage(driver);
-        homePage.clickGetInTouchButton();
+        homePage.openGetInTouchForm();
 
         GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterName("Agustin");
@@ -70,7 +70,7 @@ public class SampleTest extends TestBase {
     @Test
     public void emptyNameValidationTest() {
         HomePage homePage = new HomePage(driver);
-        homePage.clickGetInTouchButton();
+        homePage.openGetInTouchForm();
 
         GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterEmail(Constants.email);
@@ -86,7 +86,7 @@ public class SampleTest extends TestBase {
     @Test
     public void emptyEmailValidationTest() {
         HomePage homePage = new HomePage(driver);
-        homePage.clickGetInTouchButton();
+        homePage.openGetInTouchForm();
 
         GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterName("Agustin");
@@ -102,7 +102,7 @@ public class SampleTest extends TestBase {
     @Test
     public void emptyMessageValidationTest() {
         HomePage homePage = new HomePage(driver);
-        homePage.clickGetInTouchButton();
+        homePage.openGetInTouchForm();
 
         GetInTouchFormPage getInTouchFormPage = new GetInTouchFormPage(driver);
         getInTouchFormPage.enterName("Agustin");

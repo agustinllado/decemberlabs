@@ -4,7 +4,6 @@ import main.java.utils.ElementFetch;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,12 +26,14 @@ public class BasePage {
     }
 
     protected void click(WebElement element) {
+        waitForElementToBeVisible(element, 3);
         waitForElementToBeClickable(element, 3);
         element.click();
     }
 
     protected void clickRadio(WebElement element) {
         waitForElementToBeVisible(element, 3);
+        waitForElementToBeClickable(element, 3);
         element.click();
     }
 
@@ -55,6 +56,5 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(this.driver, Duration.ofSeconds(duration));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-
 
 }

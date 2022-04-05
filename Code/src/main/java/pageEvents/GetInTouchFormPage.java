@@ -1,11 +1,9 @@
 package main.java.pageEvents;
 
-import main.java.PageObjects.GetInTouchFormPageElements;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class GetInTouchFormPage extends BasePage {
 
@@ -21,37 +19,37 @@ public class GetInTouchFormPage extends BasePage {
     @FindBy(id="message")
     private WebElement messageText;
 
-    @FindBy(xpath="//*[@id='budget']//*[@value='Below $25K']")
+    @FindBy(xpath="//*[@id='budget']//*[@value='Below $25K']//ancestor::span//parent::div")
     private WebElement below25KBudgetRadio;
 
-    @FindBy(xpath="//*[@id='budget']//*[@value='$25K-$50K']")
+    @FindBy(xpath="//*[@id='budget']//*[@value='$25K-$50K']//ancestor::span//parent::div")
     private WebElement between25And50kBudgetRadio;
 
-    @FindBy(xpath="//*[@id='budget']//*[@value='$50K-$100K']")
+    @FindBy(xpath="//*[@id='budget']//*[@value='$50K-$100K']//ancestor::span//parent::div")
     private WebElement between50And100kBudgetRadio;
 
-    @FindBy(xpath="//*[@id='budget']//*[@value='$100K-$200K']")
+    @FindBy(xpath="//*[@id='budget']//*[@value='$100K-$200K']//ancestor::span//parent::div")
     private WebElement between100And200kBudgetRadio;
 
-    @FindBy(xpath="//*[@id='budget']//*[@value='Above $200K']")
+    @FindBy(xpath="//*[@id='budget']//*[@value='Above $200K']//ancestor::span//parent::div")
     private WebElement above200kBudgetRadio;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Google']")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Google']//parent::span//parent::div")
     private WebElement hearusGoogle;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Social']")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Social']//parent::span//parent::div")
     private WebElement hearusSocial;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Events']")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Events']//parent::span//parent::div")
     private WebElement hearusEvents;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Recommendation']")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Recommendation']//parent::span//parent::div")
     private WebElement hearusRecommendation;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Word-of-mouth']")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Word-of-mouth']//parent::span//parent::div")
     private WebElement hearusWordOfMouth;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Other']")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Other']//parent::span//parent::div")
     private WebElement hearusOther;
 
     @FindBy(css = ".warning #name")
@@ -63,7 +61,7 @@ public class GetInTouchFormPage extends BasePage {
     @FindBy(css = ".warning #message")
     private WebElement messageTextWarning;
 
-    @FindBy(className = ".contact-form-submit")
+    @FindBy(xpath = "//*[contains(@class,'submit')]")
     private WebElement sendButton;
 
     public GetInTouchFormPage(WebDriver driver) {
