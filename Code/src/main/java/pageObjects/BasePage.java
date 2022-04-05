@@ -1,4 +1,4 @@
-package main.java.pageEvents;
+package main.java.pageObjects;
 
 import main.java.utils.ElementFetch;
 import org.openqa.selenium.WebDriver;
@@ -11,18 +11,11 @@ import java.time.Duration;
 
 public class BasePage {
 
-    ElementFetch elementFetch;
     protected static WebDriver driver;
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
-    }
-
-    public BasePage() {
-        if (elementFetch == null) {
-            elementFetch = new ElementFetch();
-        }
     }
 
     protected void click(WebElement element) {
