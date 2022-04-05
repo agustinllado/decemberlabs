@@ -7,6 +7,8 @@ import main.java.utils.Constants;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.sql.Driver;
+
 public class SampleTest extends TestBase {
 
     @Test
@@ -23,7 +25,7 @@ public class SampleTest extends TestBase {
         getInTouchFormPage.selectHearAboutUs("Google");
         getInTouchFormPage.submit();
 
-        ConfirmationPageEvents confirmationPageEvents = new ConfirmationPageEvents();
+        ConfirmationPageEvents confirmationPageEvents = new ConfirmationPageEvents(driver);
         confirmationPageEvents.clickOk();
 
         Assert.assertTrue(homePage.isGetInTouchButtonEnabled(), "Get in touch button is not displayed");
@@ -42,7 +44,7 @@ public class SampleTest extends TestBase {
         getInTouchFormPage.selectHearAboutUs("Word-of-mouth");
         getInTouchFormPage.submit();
 
-        ConfirmationPageEvents confirmationPageEvents = new ConfirmationPageEvents();
+        ConfirmationPageEvents confirmationPageEvents = new ConfirmationPageEvents(driver);
         confirmationPageEvents.clickOk();
 
         Assert.assertTrue(homePage.isGetInTouchButtonEnabled(), "Get in touch button is not displayed");
@@ -61,7 +63,7 @@ public class SampleTest extends TestBase {
         getInTouchFormPage.selectBudget("100K-200K");
         getInTouchFormPage.submit();
 
-        ConfirmationPageEvents confirmationPageEvents = new ConfirmationPageEvents();
+        ConfirmationPageEvents confirmationPageEvents = new ConfirmationPageEvents(driver);
         confirmationPageEvents.clickOk();
 
         Assert.assertTrue(homePage.isGetInTouchButtonEnabled(), "Get in touch button is not displayed");

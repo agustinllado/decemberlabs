@@ -2,6 +2,10 @@ package main.java.pageEvents;
 
 import main.java.PageObjects.ConfirmationPageElements;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -11,23 +15,18 @@ import java.time.Duration;
 
 public class ConfirmationPageEvents extends BasePage {
 
-    public ConfirmationPageEvents() {
-        locateControls();
-    }
+    @FindBy(xpath = "//*[contains(@class, 'content_success')]//*[contains(@class, 'row big_text')]")
+    private WebElement thanksMessage;
 
-    public void locateControls() {
-        Assert.assertTrue(elementFetch.getWebElement("cssselector", ConfirmationPageElements.thanksMessage).isEnabled(), "Unable to locate success message");
-        Assert.assertTrue(elementFetch.getWebElement("cssselector", ConfirmationPageElements.okButton).isEnabled(), "Unable to locate ok button");
+    @FindBy(xpath="//*[contains(@class, 'content_success')]//*[contains(@class, 'close-modal-success')]")
+    private WebElement okButton;
+
+    public ConfirmationPageEvents(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     public void clickOk() {
-        WebDriverWait webDriverWait = new WebDriverWait(TestBase.driver, Duration.ofSeconds(3));
-        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(ConfirmationPageElements.okButton)));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        elementFetch.getWebElement("cssselector", ConfirmationPageElements.okButton).click();
+        click(okButton);
     }
 }
