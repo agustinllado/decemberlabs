@@ -3,16 +3,13 @@ package main.java.utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import test.java.TestBase;
 
-import java.time.Duration;
 import java.util.List;
 
 public class ElementFetch {
 
-    WebDriver browser = TestBase.browser;
+    WebDriver browser = TestBase.driver;
 
     public WebElement getWebElement(String identifierType, String identifierValue) {
         identifierType = identifierType.toLowerCase();
