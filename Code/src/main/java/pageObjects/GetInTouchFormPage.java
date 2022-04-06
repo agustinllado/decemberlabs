@@ -7,58 +7,58 @@ import org.openqa.selenium.support.PageFactory;
 
 public class GetInTouchFormPage extends main.java.pageObjects.BasePage {
 
-    @FindBy(id="name")
+    @FindBy(xpath = "//*[@id='name']")
     private WebElement nameText;
 
-    @FindBy(id="email")
+    @FindBy(xpath = "//*[@id='email']")
     private WebElement emailText;
 
-    @FindBy(id="company")
+    @FindBy(xpath = "//*[@id='company']")
     private WebElement companyText;
 
-    @FindBy(id="message")
+    @FindBy(xpath = "//*[@id='message']")
     private WebElement messageText;
 
-    @FindBy(xpath="//*[@id='budget']//*[@value='Below $25K']//ancestor::span//parent::div")
+    @FindBy(xpath = "//*[@id='budget']//*[@value='Below $25K']//ancestor::*[@class='radio']")
     private WebElement below25KBudgetRadio;
 
-    @FindBy(xpath="//*[@id='budget']//*[@value='$25K-$50K']//ancestor::span//parent::div")
+    @FindBy(xpath = "//*[@id='budget']//*[@value='$25K-$50K']//ancestor::*[@class='radio']")
     private WebElement between25And50kBudgetRadio;
 
-    @FindBy(xpath="//*[@id='budget']//*[@value='$50K-$100K']//ancestor::span//parent::div")
+    @FindBy(xpath = "//*[@id='budget']//*[@value='$50K-$100K']//ancestor::*[@class='radio']")
     private WebElement between50And100kBudgetRadio;
 
-    @FindBy(xpath="//*[@id='budget']//*[@value='$100K-$200K']//ancestor::span//parent::div")
+    @FindBy(xpath = "//*[@id='budget']//*[@value='$100K-$200K']//ancestor::*[@class='radio']")
     private WebElement between100And200kBudgetRadio;
 
-    @FindBy(xpath="//*[@id='budget']//*[@value='Above $200K']//ancestor::span//parent::div")
+    @FindBy(xpath = "//*[@id='budget']//*[@value='Above $200K']//ancestor::*[@class='radio']")
     private WebElement above200kBudgetRadio;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Google']//parent::span//parent::div")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Google']//ancestor::*[@class='radio']")
     private WebElement hearusGoogle;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Social']//parent::span//parent::div")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Social']//ancestor::*[@class='radio']")
     private WebElement hearusSocial;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Events']//parent::span//parent::div")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Events']//ancestor::*[@class='radio']")
     private WebElement hearusEvents;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Recommendation']//parent::span//parent::div")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Recommendation']//ancestor::*[@class='radio']")
     private WebElement hearusRecommendation;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Word-of-mouth']//parent::span//parent::div")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Word-of-mouth']//ancestor::*[@class='radio']")
     private WebElement hearusWordOfMouth;
 
-    @FindBy(xpath = "//*[@id='hearus']//*[@value='Other']//parent::span//parent::div")
+    @FindBy(xpath = "//*[@id='hearus']//*[@value='Other']//ancestor::*[@class='radio']")
     private WebElement hearusOther;
 
-    @FindBy(css = ".warning #name")
+    @FindBy(xpath = "//*[contains(@class, 'warning')]//*[@id='name']")
     private WebElement nameTextWarning;
 
-    @FindBy(css = ".warning #email")
+    @FindBy(xpath = "//*[contains(@class, 'warning')]//*[@id='email']")
     private WebElement emailTextWarning;
 
-    @FindBy(css = ".warning #message")
+    @FindBy(xpath = "//*[contains(@class, 'warning')]//*[@id='message']")
     private WebElement messageTextWarning;
 
     @FindBy(xpath = "//*[contains(@class,'submit')]")

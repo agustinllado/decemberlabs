@@ -7,7 +7,7 @@ import org.testng.IAnnotationTransformer;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import test.java.*;
+import test.java.desktop.TestBase;
 
 import java.io.File;
 import java.io.IOException;

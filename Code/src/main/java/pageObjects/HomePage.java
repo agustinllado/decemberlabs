@@ -9,10 +9,10 @@ import org.testng.Assert;
 
 public class HomePage extends main.java.pageObjects.BasePage {
 
-    @FindBy(how = How.CLASS_NAME, using = "btn_mobile")
+    @FindBy(xpath = "//*[@class='btn_mobile']")
     private WebElement hamburgerButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@class='content_navigation']//*[contains(@class, 'btn_start_project')]")
+    @FindBy(xpath = "//*[@class='content_navigation']//*[contains(@class, 'btn_start_project')]")
     private WebElement getInTouchButton;
 
     public HomePage(WebDriver driver) {
