@@ -10,7 +10,7 @@ public class ConfirmationPage extends main.java.pageObjects.BasePage {
     @FindBy(xpath = "//*[contains(@class, 'content_success')]//*[contains(@class, 'row big_text')]")
     private WebElement thanksMessage;
 
-    @FindBy(xpath="//*[contains(@class, 'content_success')]//*[contains(@class, 'close-modal-success')]")
+    @FindBy(xpath = "//*[contains(@class, 'content_success')]//*[contains(@class, 'close-modal-success')]")
     private WebElement okButton;
 
     public ConfirmationPage(WebDriver driver) {

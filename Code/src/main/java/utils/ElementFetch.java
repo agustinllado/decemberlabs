@@ -3,7 +3,7 @@ package main.java.utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import test.java.TestBase;
+import test.java.desktop.TestBase;
 
 import java.util.List;
 

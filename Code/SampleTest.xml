@@ -5,9 +5,10 @@
         <listener class-name="main.java.utils.SuiteListener"></listener>
     </listeners>
     <test name="Test Automation">
+        <parameter name="os" value="windows"/>
         <parameter name="browserName" value="chrome"/>
         <classes>
-            <class name="test.java.SampleTest"/>
+            <class name="test.java.desktop.SampleTest"/>
         </classes>
     </test>
 </suite> <!-- Suite -->
