@@ -1,0 +1,13 @@
+test\java\desktop\TestBase.class
+main\java\utils\SuiteListener.class
+main\java\utils\ElementFetch.class
+main\java\pageObjects\BasePage.class
+main\java\pageObjects\GetInTouchFormPage.class
+main\java\pageObjects\ConfirmationPage.class
+main\java\pageObjects\HomePage.class
+main\java\utils\ElementWait.class
+main\java\utils\RetryAnalyzer.class
+main\java\utils\Constants.class
+test\java\desktop\SampleTest.class
+test\java\android\MobileTestBase.class
+test\java\android\SampleTest.class

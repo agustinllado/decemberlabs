@@ -1,0 +1,4 @@
+test\java\desktop\TestBase.class
+test\java\desktop\SampleTest.class
+test\java\android\MobileTestBase.class
+test\java\android\SampleTest.class
